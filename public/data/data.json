@@ -1,0 +1,107 @@
+[
+    {
+        "title": "Womens’ & Girls’ Fashion"
+    },
+    {
+        "title": "Health & Beauty"
+    },
+    {
+        "title": "Watches, Bags, Jewellery",
+        "submenu": "true",
+        "submenuItems": [
+            {
+                "title": "kids bags"
+            },
+            {
+                "title": "laptop bags & cases"
+            },
+            {
+                "title": "Luggage"
+            },
+            {
+                "title": "Travel Bags"
+            },
+            {
+                "title": "Men’s bag"
+            },
+            {
+                "title": "Women’s Bag",
+                "subsubmenu": "true",
+                "subsubmenuItems": [
+                    {
+                        "title": "Backpacks"
+                    },
+                    {
+                        "title": "Cross Body & Shulder Bags"
+                    },
+                    {
+                        "title": "Bag Charms& Accessories"
+                    },
+                    {
+                        "title": "Clutches"
+                    },
+                    {
+                        "title": "Top-Handle Bags"
+                    },
+                    {
+                        "title": "Tote bags"
+                    },
+                    {
+                        "title": "wallets"
+                    }
+                ]
+            },
+            {
+                "title": "Men’s Watches"
+            },
+            {
+                "title": "Women’s Watches"
+            },
+            {
+                "title": "Kids Watches"
+            },
+            {
+                "title": "women’s jewellery"
+            },
+            {
+                "title": "men’s jewellery"
+            },
+            {
+                "title": "sunglasses"
+            }
+        ]
+    },
+    {
+        "title": "Men's & Boys' Fashion"
+    },
+    {
+        "title": "Mother & Baby"
+    },
+    {
+        "title": "Electronics Devices"
+    },
+    {
+        "title": "TV & Home Appliances"
+    },
+    {
+        "title": "Electronic Accessories"
+    },
+    {
+        "title": "Groceries"
+    },
+    {
+        "title": "Home & Lifestyle"
+    },
+    {
+        "title": "Sports & Outdoors"
+    },
+    {
+        "title": "Automobile"
+    },
+    {
+        "title": "Computer and laptop"
+    },
+    {
+        "title": "Pet Supplies"
+    }
+]

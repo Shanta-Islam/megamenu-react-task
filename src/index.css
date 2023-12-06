@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.btn {
+    font-family: 'Anton', sans-serif;
+}
+
