@@ -152,7 +152,7 @@ const Banner = () => {
                                 <div className="w-full border-b-2 border-gray-200">
                                 </div>
                                 <div className="flex bg-gray-100  overflow-x-hidden">
-                                    <div className="bg-white lg:flex md:w-72 md:flex-col hidden">
+                                    <div className="bg-white lg:flex md:w-80 md:flex-col hidden">
                                         <div className="flex-col pt-5 flex overflow-y-auto">
                                             <div className="h-full flex-col justify-between px-4 flex">
                                                 <div className="space-y-4">
@@ -164,15 +164,15 @@ const Banner = () => {
                                                                         <li key={index} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 pt-3 flex transition-all duration-200  group cursor-pointer'>
                                                                             <img src={menu.img} alt="" className='mr-2' />
                                                                             <span>{menu.title}</span>
-                                                                            {menu.submenu && <FaChevronRight onClick={() => setSubmenuOpen(!submenuOpen)}></FaChevronRight>}
+                                                                            {menu.submenu && <FaChevronRight onClick={() => setSubmenuOpen(!submenuOpen)} className='ml-9'></FaChevronRight>}
                                                                         </li>
-                                                                        {menu.submenu && submenuOpen && <ul className='absolute left-64 bg-white top-0 w-[20%]'>
+                                                                        {menu.submenu && submenuOpen && <ul className='absolute left-72 bg-white top-0 w-[20%]'>
                                                                             {menu.submenuItems.map((submenu, index) =>
                                                                                 <>
                                                                                     <li key={index} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2 flex transition-all duration-200  group cursor-pointer'>
                                                                                         <span>{submenu.title}</span>
 
-                                                                                        {submenu.subsubmenu && <FaChevronRight onClick={() => setSubsubmenuOpen(!subsubmenuOpen)}></FaChevronRight>}
+                                                                                        {submenu.subsubmenu && <FaChevronRight onClick={() => setSubsubmenuOpen(!subsubmenuOpen)} className='ml-9'></FaChevronRight>}
                                                                                     </li>
                                                                                     {submenu.subsubmenu && subsubmenuOpen && <ul className='absolute left-64 bg-white top-0 w-full h-full'>
                                                                                         {submenu.subsubmenuItems.map((menuitem, index) =>
