@@ -17,35 +17,37 @@ import img13 from "../../../assets/images/Computer and laptop.png"
 import img14 from "../../../assets/images/Pet Supplies.png"
 const Banner = () => {
     const menus = [
-        {
+        {   "id": 1,
             "title": "Womens’ & Girls’ Fashion",
-            "img": img1
+            "img": img1,
+            "submenu": "false"
         },
-        {
+        {   "id": 2,
             "title": "Health & Beauty",
-            "img": img2
+            "img": img2,
+            "submenu": "false"
         },
-        {
+        {   "id": 3,
             "title": "Watches, Bags, Jewellery",
             "img": img3,
             "submenu": "true",
             "submenuItems": [
-                {
+                {   "id": 1,
                     "title": "kids bags"
                 },
-                {
+                {   "id": 2,
                     "title": "laptop bags & cases"
                 },
-                {
+                {   "id": 3,
                     "title": "Luggage"
                 },
-                {
+                {   "id": 4,
                     "title": "Travel Bags"
                 },
-                {
+                {   "id": 5,
                     "title": "Men’s bag"
                 },
-                {
+                {   "id": 6,
                     "title": "Women’s Bag",
                     "subsubmenu": "true",
                     "subsubmenuItems": [
@@ -92,54 +94,72 @@ const Banner = () => {
                 }
             ]
         },
-        {
+        {   "id": 4,
             "title": "Men's & Boys' Fashion",
-            "img": img4
+            "img": img4,
+            "submenu": "false"
         },
-        {
+        {   "id": 5,
             "title": "Mother & Baby",
-            "img": img5
+            "img": img5,
+            "submenu": "false"
         },
-        {
+        {   "id": 6,
             "title": "Electronics Devices",
-            "img": img6
+            "img": img6,
+            "submenu": "false"
         },
-        {
+        {   "id": 7,
             "title": "TV & Home Appliances",
-            "img": img7
+            "img": img7,
+            "submenu": "false"
         },
-        {
+        {   "id": 8,
             "title": "Electronic Accessories",
-            "img": img8
+            "img": img8,
+            "submenu": "false"
         },
-        {
+        {   "id": 9,
             "title": "Groceries",
-            "img": img9
+            "img": img9,
+            "submenu": "false"
         },
-        {
+        {   "id": 10,
             "title": "Home & Lifestyle",
-            "img": img10
+            "img": img10,
+            "submenu": "false"
         },
-        {
+        {   "id": 11,
             "title": "Sports & Outdoors",
-            "img": img11
+            "img": img11,
+            "submenu": "false"
         },
-        {
+        {   "id": 12,
             "title": "Automobile",
-            "img": img12
+            "img": img12,
+            "submenu": "false"
         },
-        {
+        {   "id": 13,
             "title": "Computer and laptop",
-            "img": img13
+            "img": img13,
+            "submenu": "false"
         },
-        {
+        {   "id": 14,
             "title": "Pet Supplies",
-            "img": img14
+            "img": img14,
+            "submenu": "false"
         }
     ]
-    const [submenuOpen, setSubmenuOpen] = useState(false);
+    const [submenuOpen, setSubmenuOpen] = useState(false );
     const [subsubmenuOpen, setSubsubmenuOpen] = useState(false);
-
+    const handleMouseEnter = (e) => {
+        console.log(e.target);
+        setSubmenuOpen(true);
+      };
+    
+      const handleMouseLeave = () => {
+        setSubmenuOpen(false);
+      };
     return (
 
         <div className="relative bg-[url(https://i.ibb.co/CV4qthm/slide-banner.png)] bg-top  bg-no-repeat max-h-screen">
@@ -159,14 +179,17 @@ const Banner = () => {
                                                     <div className="bg-top bg-cover space-y-1">
                                                         <ul className='pt-2 h-full'>
                                                             {
-                                                                menus?.map((menu, index) =>
+                                                                menus?.map((menu) =>
                                                                     <>
-                                                                        <li key={index} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 pt-3 flex transition-all duration-200  group cursor-pointer'>
+                                                                        <li key={menu.id}  onClick={handleMouseEnter}
+          onMouseLeave={handleMouseLeave} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 pt-3 flex transition-all duration-200  group cursor-pointer hover:text-[#F97316]'>
                                                                             <img src={menu.img} alt="" className='mr-2' />
                                                                             <span>{menu.title}</span>
-                                                                            {menu.submenu && <FaChevronRight onClick={() => setSubmenuOpen(!submenuOpen)} className='ml-9'></FaChevronRight>}
+                                                                            {menu.submenu==="true" && <FaChevronRight className='ml-9'></FaChevronRight>}
+                                                                            
                                                                         </li>
-                                                                        {menu.submenu && submenuOpen && <ul className='absolute left-72 bg-white top-0 w-[20%]'>
+                                                                       
+                                                                        {menu.submenu==="true" && submenuOpen && <ul className='absolute left-72 bg-white top-0 w-[20%]'>
                                                                             {menu.submenuItems.map((submenu, index) =>
                                                                                 <>
                                                                                     <li key={index} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2 flex transition-all duration-200  group cursor-pointer'>
