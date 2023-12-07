@@ -17,149 +17,199 @@ import img13 from "../../../assets/images/Computer and laptop.png"
 import img14 from "../../../assets/images/Pet Supplies.png"
 const Banner = () => {
     const menus = [
-        {   "id": 1,
+        {
+            "id": 1,
             "title": "Womens’ & Girls’ Fashion",
             "img": img1,
             "submenu": "false"
         },
-        {   "id": 2,
+        {
+            "id": 2,
             "title": "Health & Beauty",
             "img": img2,
             "submenu": "false"
         },
-        {   "id": 3,
+        {
+            "id": 3,
             "title": "Watches, Bags, Jewellery",
             "img": img3,
             "submenu": "true",
             "submenuItems": [
-                {   "id": 1,
-                    "title": "kids bags"
+                {
+                    "id": 1,
+                    "title": "kids bags",
+                    "subsubmenu": "false"
                 },
-                {   "id": 2,
-                    "title": "laptop bags & cases"
+                {
+                    "id": 2,
+                    "title": "laptop bags & cases",
+                    "subsubmenu": "false"
                 },
-                {   "id": 3,
-                    "title": "Luggage"
+                {
+                    "id": 3,
+                    "title": "Luggage",
+                    "subsubmenu": "false"
                 },
-                {   "id": 4,
-                    "title": "Travel Bags"
+                {
+                    "id": 4,
+                    "title": "Travel Bags",
+                    "subsubmenu": "false"
                 },
-                {   "id": 5,
-                    "title": "Men’s bag"
+                {
+                    "id": 5,
+                    "title": "Men’s bag",
+                    "subsubmenu": "false"
                 },
-                {   "id": 6,
+                {
+                    "id": 6,
                     "title": "Women’s Bag",
                     "subsubmenu": "true",
                     "subsubmenuItems": [
                         {
+                            "id": 1,
                             "title": "Backpacks"
                         },
                         {
+                            "id": 2,
                             "title": "Cross Body & Shulder Bags"
                         },
                         {
+                            "id": 3,
                             "title": "Bag Charms& Accessories"
                         },
                         {
+                            "id": 4,
                             "title": "Clutches"
                         },
                         {
+                            "id": 5,
                             "title": "Top-Handle Bags"
                         },
                         {
+                            "id": 6,
                             "title": "Tote bags"
                         },
                         {
+                            "id": 7,
                             "title": "wallets"
                         }
                     ]
                 },
                 {
-                    "title": "Men’s Watches"
+                    "id": 7,
+                    "title": "Men’s Watches",
+                    "subsubmenu": "false"
                 },
                 {
-                    "title": "Women’s Watches"
+                    "id": 8,
+                    "title": "Women’s Watches",
+                    "subsubmenu": "false"
                 },
                 {
-                    "title": "Kids Watches"
+                    "id": 9,
+                    "title": "Kids Watches",
+                    "subsubmenu": "false"
                 },
                 {
-                    "title": "women’s jewellery"
+                    "id": 10,
+                    "title": "women’s jewellery",
+                    "subsubmenu": "false"
                 },
                 {
-                    "title": "men’s jewellery"
+                    "id": 11,
+                    "title": "men’s jewellery",
+                    "subsubmenu": "false"
                 },
                 {
-                    "title": "sunglasses"
+                    "id": 12,
+                    "title": "sunglasses",
+                    "subsubmenu": "false"
                 }
             ]
         },
-        {   "id": 4,
+        {
+            "id": 4,
             "title": "Men's & Boys' Fashion",
             "img": img4,
             "submenu": "false"
         },
-        {   "id": 5,
+        {
+            "id": 5,
             "title": "Mother & Baby",
             "img": img5,
             "submenu": "false"
         },
-        {   "id": 6,
+        {
+            "id": 6,
             "title": "Electronics Devices",
             "img": img6,
             "submenu": "false"
         },
-        {   "id": 7,
+        {
+            "id": 7,
             "title": "TV & Home Appliances",
             "img": img7,
             "submenu": "false"
         },
-        {   "id": 8,
+        {
+            "id": 8,
             "title": "Electronic Accessories",
             "img": img8,
             "submenu": "false"
         },
-        {   "id": 9,
+        {
+            "id": 9,
             "title": "Groceries",
             "img": img9,
             "submenu": "false"
         },
-        {   "id": 10,
+        {
+            "id": 10,
             "title": "Home & Lifestyle",
             "img": img10,
             "submenu": "false"
         },
-        {   "id": 11,
+        {
+            "id": 11,
             "title": "Sports & Outdoors",
             "img": img11,
             "submenu": "false"
         },
-        {   "id": 12,
+        {
+            "id": 12,
             "title": "Automobile",
             "img": img12,
             "submenu": "false"
         },
-        {   "id": 13,
+        {
+            "id": 13,
             "title": "Computer and laptop",
             "img": img13,
             "submenu": "false"
         },
-        {   "id": 14,
+        {
+            "id": 14,
             "title": "Pet Supplies",
             "img": img14,
             "submenu": "false"
         }
     ]
-    const [submenuOpen, setSubmenuOpen] = useState(false );
+    const [submenuOpen, setSubmenuOpen] = useState(false);
     const [subsubmenuOpen, setSubsubmenuOpen] = useState(false);
-    const handleMouseEnter = (e) => {
-        console.log(e.target);
+    const handleMouseEnter = () => {
         setSubmenuOpen(true);
-      };
-    
-      const handleMouseLeave = () => {
+    };
+
+    const handleMouseLeave = () => {
         setSubmenuOpen(false);
-      };
+    };
+    const handleMouseEnterTwo = () => {
+        setSubsubmenuOpen(true)
+    };
+
+    const handleMouseLeaveTwo = () => {
+        setSubsubmenuOpen(false)
+    };
     return (
 
         <div className="relative bg-[url(https://i.ibb.co/CV4qthm/slide-banner.png)] bg-top  bg-no-repeat max-h-screen">
@@ -181,40 +231,47 @@ const Banner = () => {
                                                             {
                                                                 menus?.map((menu) =>
                                                                     <>
-                                                                        <li key={menu.id}  onClick={handleMouseEnter}
-          onMouseLeave={handleMouseLeave} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 pt-3 flex transition-all duration-200  group cursor-pointer hover:text-[#F97316]'>
-                                                                            <img src={menu.img} alt="" className='mr-2' />
-                                                                            <span>{menu.title}</span>
-                                                                            {menu.submenu==="true" && <FaChevronRight className='ml-9'></FaChevronRight>}
-                                                                            
-                                                                        </li>
-                                                                       
-                                                                        {menu.submenu==="true" && submenuOpen && <ul className='absolute left-72 bg-white top-0 w-[20%]'>
-                                                                            {menu.submenuItems.map((submenu, index) =>
-                                                                                <>
-                                                                                    <li key={index} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2 flex transition-all duration-200  group cursor-pointer'>
-                                                                                        <span>{submenu.title}</span>
-
-                                                                                        {submenu.subsubmenu && <FaChevronRight onClick={() => setSubsubmenuOpen(!subsubmenuOpen)} className='ml-9'></FaChevronRight>}
-                                                                                    </li>
-                                                                                    {submenu.subsubmenu && subsubmenuOpen && <ul className='absolute left-64 bg-white top-0 w-full h-full'>
-                                                                                        {submenu.subsubmenuItems.map((menuitem, index) =>
-                                                                                            <>
-                                                                                                <li key={index} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2 flex transition-all duration-200  group cursor-pointer'>
-                                                                                                    <span>{menuitem.title}</span>
-
-
+                                                                        {menu.submenu === "true" ?
+                                                                            <li key={menu.id}
+                                                                                onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 pt-3 flex transition-all duration-200  group cursor-pointer hover:text-[#F97316]'>
+                                                                                <img src={menu.img} alt="" className='mr-2' />
+                                                                                <span>{menu.title}</span>
+                                                                                {menu.submenu === "true" && submenuOpen && <FaChevronRight className='ml-9'></FaChevronRight>}
+                                                                                {menu.submenu === "true" && submenuOpen && <ul className='absolute left-72 bg-white top-0 w-[20%]'>
+                                                                                    {menu.submenuItems.map((submenu) =>
+                                                                                        <>
+                                                                                            {submenu.subsubmenu === "true" ?
+                                                                                                <li key={submenu.id} onMouseEnter={handleMouseEnterTwo} onMouseLeave={handleMouseLeaveTwo} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2 flex transition-all duration-200  group cursor-pointer hover:text-[#F97316]'>
+                                                                                                    <span>{submenu.title}</span>
+                                                                                                    {submenu.subsubmenu === "true" && subsubmenuOpen && <FaChevronRight className='ml-9'></FaChevronRight>}
+                                                                                                    {submenu.subsubmenu=== "true" && subsubmenuOpen && <ul className='absolute left-64 bg-white top-0 w-full h-full'>
+                                                                                                        {submenu.subsubmenuItems.map((menuitem, index) =>
+                                                                                                            <>
+                                                                                                                <li key={index} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2 flex transition-all duration-200  group cursor-pointer hover:text-[#F97316]'>
+                                                                                                                    <span>{menuitem.title}</span>
+                                                                                                                </li>
+                                                                                                            </>
+                                                                                                        )}
+                                                                                                    </ul>
+                                                                                                    }
                                                                                                 </li>
-                                                                                            </>
-                                                                                        )}
-                                                                                    </ul>
-                                                                                    }
-                                                                                </>
-                                                                            )}
-                                                                        </ul>
+                                                                                                :
+                                                                                                <li key={submenu.id} className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2 flex transition-all duration-200  group cursor-pointer hover:text-[#F97316]'>
+                                                                                                    <span>{submenu.title}</span>
+                                                                                                </li>
+                                                                                            }
+                                                                                        </>
+                                                                                    )}
+                                                                                </ul>}
+                                                                            </li>
+                                                                            :
+                                                                            <li key={menu.id}
+                                                                                className='font-medium text-sm items-center rounded-lg text-gray-900 px-4 pt-3 flex transition-all duration-200  group cursor-pointer hover:text-[#F97316]'>
+                                                                                <img src={menu.img} alt="" className='mr-2' />
+                                                                                <span>{menu.title}</span>
+                                                                            </li>
                                                                         }
                                                                     </>
-
                                                                 )
                                                             }
                                                         </ul>
